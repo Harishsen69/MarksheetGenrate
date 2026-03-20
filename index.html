@@ -1,36 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .sub_div{
-      border:2px solid red;
-      width:300px;
-      text-align: center;
-    }
-    #students{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .output{
+            border: 2px solid red;
+            height: 200px;
+            width: 200px;
+            transition: 0.5s;
+        }
+        .output:hover{
+            transform: rotate(45deg) translateX(100px) scale(0.8);
+        }
+    </style>
 </head>
 <body>
-  <div id="students">
+    <div class="output">
 
-  </div>
+    </div>
 </body>
-<script>
-  let Users=JSON.parse(localStorage.getItem('student'))||[]
-  document.getElementById('students').innerHTML=
-  Users.map(i=>(
-    `<div class='sub_div'>
-      <h2>${i.name}</h2>
-      <p>${i.email}</p>
-      <p>${i.address}</p>
-    </div>`
-  )).join("")
-</script>
 </html>
